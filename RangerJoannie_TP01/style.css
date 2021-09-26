@@ -1,0 +1,173 @@
+@import url("couleur.css"); /*Importer ma ressourcess css pour les couleurs.css*/
+
+/**************-------------------------------Apparence de base (si la fenêtre est >800px) *************/
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 5px;
+  background-color: var(--jaune);
+  color: black;
+  font-weight: bold;
+  height: 25%;
+  margin: 3%;
+  padding-top: 3%;
+}
+
+article {
+  background-color: black;
+  display: flex;
+  width: 90vh;
+  height: 15vh;
+  align-items: center;
+}
+.start {
+  background-color: var(--jaune);
+  /*flex-direction: row;*/
+  margin: 5px;
+  padding: 8px 10px;
+  height: 100px;
+}
+
+footer {
+  font-size: xx-small;
+  text-align: left;
+  padding-left: 3px;
+}
+
+a {
+  padding-bottom: 5px;
+}
+/****************----------------Apparence si la fenêtre est <800px-------------------------------****************/
+@media screen and (max-width: 800px) {
+  article {
+    height: 25vh;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  .start {
+    flex-direction: column;
+  }
+  /*fenetre PARTIE*/
+
+  * .corps_partie {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section_droit_partie {
+    margin: 15px;
+  }
+}
+
+/*--------------------------------------------------------------Page partie-------------------------------*/
+
+nav {
+  background-color: var(--jaune);
+}
+
+.ma_grid {
+  display: grid; /*crée un grid automatiquement*/
+  /*Le grid sera de forme : 3 éléments sur chaque rangé*/
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 10px; /*taille de l'espacement entre les cases: j'ai voulu que ca soit plus espacé*/
+  width: auto;
+  height: auto;
+  margin: 25px;
+  border: solid black;
+  background-color: var(--Gris-fonce);
+}
+
+.mes_cases {
+  cursor: pointer; /*Pour avoir la main qui pointe*/
+  width: 100px;
+  height: 100px;
+  border: 1px solid var(--Gris-fonce);
+  line-height: 100px;
+  font-size: 50px;
+  font-family: fantasy;
+  background-color: var(--jaune);
+}
+
+.corps_partie {
+  display: flex;
+  justify-content: center; /*centre les elements horizontalement*/
+  align-items: center; /*centre les elements verticalement*/
+  background-color: black;
+  height: 30%;
+}
+
+.section_droit_partie {
+  transform: translate(0%, -10%);
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.partie_nav {
+  background-color: var(--jaune);
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+}
+
+img {
+  display: block;
+  /*Centre l'image: */
+  margin-left: auto;
+  margin-right: auto;
+  /*Taille:*/
+  width: 50%;
+}
+
+h1 {
+  background-color: var(--jaune);
+  font-weight: bold;
+  width: 100%;
+  padding: 8%;
+}
+
+h2 {
+  width: 100%;
+  font-size: large;
+  padding: 6%;
+}
+
+/*ON CENTRE LES TEXTES PARTOUT*/
+* {
+  text-align: center;
+}
+
+/*LES CLASSES DE COULEURS POUR LES DEUX JOUEURS*/
+.joueur1 {
+  border: solid var(--Bordure-rouge);
+  background-color: var(--rouge);
+}
+
+.joueur2 {
+  border: solid var(--Bordure-bleue);
+  background-color: var(--Bleu-clair);
+}
+/*LA CLASSES DU MESSAGE D'ERREUR*/
+.erreur {
+  border: solid var(--Bordure-erreur);
+  background-color: var(--Erreur);
+}
+/*LA CLASSES POUR LE GAGANT OU LA FIN NULLE*/
+.Fin {
+  border: solid var(--Bordure-vert);
+  background-color: var(--vert);
+}
+
+/*Classe pour aggrandissement des cases gagnantes*/
+.grow {
+  transform: scale(1.2);
+}

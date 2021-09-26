@@ -1,0 +1,13 @@
+:root {
+  --jaune: #ffff77;
+  --rouge: #ff7777;
+  --Bordure-rouge: red;
+  --Bleu-clair: #7777ff;
+  --Bordure-bleue: blue;
+  --Gris-fonce: #222222;
+  --Erreur: #f7481c;
+  --Bordure-erreur: #691f0c;
+  --vert: #0ce417;
+  --Bordure-vert: #0a680f;
+  /*tu peut y donner le nom que tu veux pour l'utiliser dans ton code*/
+}
